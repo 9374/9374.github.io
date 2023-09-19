@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx | zvue</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.0ab6a768.css" as="style"><link rel="preload" href="/assets/js/app.79fcf93e.js" as="script"><link rel="preload" href="/assets/js/3.9446284f.js" as="script"><link rel="preload" href="/assets/js/1.83d3f97c.js" as="script"><link rel="preload" href="/assets/js/42.b9486543.js" as="script"><link rel="prefetch" href="/assets/js/10.701200e3.js"><link rel="prefetch" href="/assets/js/11.275f16fd.js"><link rel="prefetch" href="/assets/js/12.f8ab336d.js"><link rel="prefetch" href="/assets/js/13.5841f8be.js"><link rel="prefetch" href="/assets/js/14.18de3850.js"><link rel="prefetch" href="/assets/js/15.e3193774.js"><link rel="prefetch" href="/assets/js/16.c89f0b8f.js"><link rel="prefetch" href="/assets/js/17.dc3bb0c0.js"><link rel="prefetch" href="/assets/js/18.e3a0b77d.js"><link rel="prefetch" href="/assets/js/19.c615258e.js"><link rel="prefetch" href="/assets/js/20.f999ee22.js"><link rel="prefetch" href="/assets/js/21.46852247.js"><link rel="prefetch" href="/assets/js/22.a1e96022.js"><link rel="prefetch" href="/assets/js/23.94788724.js"><link rel="prefetch" href="/assets/js/24.fb37a205.js"><link rel="prefetch" href="/assets/js/25.bac60109.js"><link rel="prefetch" href="/assets/js/26.851d8f0c.js"><link rel="prefetch" href="/assets/js/27.f407c03d.js"><link rel="prefetch" href="/assets/js/28.4dee56f4.js"><link rel="prefetch" href="/assets/js/29.1568f46d.js"><link rel="prefetch" href="/assets/js/30.178a4140.js"><link rel="prefetch" href="/assets/js/31.d6eac92e.js"><link rel="prefetch" href="/assets/js/32.682a6909.js"><link rel="prefetch" href="/assets/js/33.a2229843.js"><link rel="prefetch" href="/assets/js/34.e6e106d7.js"><link rel="prefetch" href="/assets/js/35.23bdd722.js"><link rel="prefetch" href="/assets/js/36.516ce882.js"><link rel="prefetch" href="/assets/js/37.8ab9d0a9.js"><link rel="prefetch" href="/assets/js/38.1ab2b4aa.js"><link rel="prefetch" href="/assets/js/39.b628cb26.js"><link rel="prefetch" href="/assets/js/4.a126a949.js"><link rel="prefetch" href="/assets/js/40.721053f2.js"><link rel="prefetch" href="/assets/js/41.c93c29bb.js"><link rel="prefetch" href="/assets/js/43.6535ff61.js"><link rel="prefetch" href="/assets/js/44.42cc53ce.js"><link rel="prefetch" href="/assets/js/45.ab9f0218.js"><link rel="prefetch" href="/assets/js/46.ca191973.js"><link rel="prefetch" href="/assets/js/47.953a858f.js"><link rel="prefetch" href="/assets/js/48.48101037.js"><link rel="prefetch" href="/assets/js/49.ebe44af2.js"><link rel="prefetch" href="/assets/js/5.2f9f316b.js"><link rel="prefetch" href="/assets/js/50.fe92fcb8.js"><link rel="prefetch" href="/assets/js/51.74907353.js"><link rel="prefetch" href="/assets/js/52.0d58ec3b.js"><link rel="prefetch" href="/assets/js/53.a3f87dbc.js"><link rel="prefetch" href="/assets/js/54.89e1d576.js"><link rel="prefetch" href="/assets/js/55.36bc7987.js"><link rel="prefetch" href="/assets/js/56.663cefbe.js"><link rel="prefetch" href="/assets/js/57.4dbb089e.js"><link rel="prefetch" href="/assets/js/58.4c7954a7.js"><link rel="prefetch" href="/assets/js/59.e337873c.js"><link rel="prefetch" href="/assets/js/6.79caa79a.js"><link rel="prefetch" href="/assets/js/60.62dc1d0a.js"><link rel="prefetch" href="/assets/js/61.fa5d4567.js"><link rel="prefetch" href="/assets/js/62.98ff8ff7.js"><link rel="prefetch" href="/assets/js/63.cc2e73f6.js"><link rel="prefetch" href="/assets/js/64.27fb9823.js"><link rel="prefetch" href="/assets/js/65.153fdc29.js"><link rel="prefetch" href="/assets/js/66.0fbca66c.js"><link rel="prefetch" href="/assets/js/67.510619db.js"><link rel="prefetch" href="/assets/js/68.f1cd1e56.js"><link rel="prefetch" href="/assets/js/69.07313582.js"><link rel="prefetch" href="/assets/js/7.b82c441b.js"><link rel="prefetch" href="/assets/js/70.08bdfc27.js"><link rel="prefetch" href="/assets/js/71.1cf4b650.js"><link rel="prefetch" href="/assets/js/72.6f64729d.js"><link rel="prefetch" href="/assets/js/73.bd823c17.js"><link rel="prefetch" href="/assets/js/74.c9473203.js"><link rel="prefetch" href="/assets/js/75.78373fae.js"><link rel="prefetch" href="/assets/js/76.cf16bb24.js"><link rel="prefetch" href="/assets/js/77.1a22e988.js"><link rel="prefetch" href="/assets/js/78.8754430d.js"><link rel="prefetch" href="/assets/js/79.a39a8ca0.js"><link rel="prefetch" href="/assets/js/8.9cc0f7d8.js"><link rel="prefetch" href="/assets/js/80.99dc5cdc.js"><link rel="prefetch" href="/assets/js/81.63641222.js"><link rel="prefetch" href="/assets/js/82.c964c56c.js"><link rel="prefetch" href="/assets/js/83.30118c3d.js"><link rel="prefetch" href="/assets/js/84.5720dccd.js"><link rel="prefetch" href="/assets/js/85.4f7a7c75.js"><link rel="prefetch" href="/assets/js/86.3a01ad50.js"><link rel="prefetch" href="/assets/js/87.099a6d75.js"><link rel="prefetch" href="/assets/js/9.0d65730a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0ab6a768.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>zvue</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>9374</span>
+          
+        <span data-v-59e6cb88>2018 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">zvue</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/chrome/" class="nav-link"><i class="undefined"></i>
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eslint/" class="nav-link"><i class="undefined"></i>
+  eslint
+</a></li><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/game/" class="nav-link"><i class="undefined"></i>
+  game
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jQuery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mac/" class="nav-link"><i class="undefined"></i>
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/math/" class="nav-link"><i class="undefined"></i>
+  math
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mobile/" class="nav-link"><i class="undefined"></i>
+  mobile
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NAS/" class="nav-link"><i class="undefined"></i>
+  NAS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node.js/" class="nav-link"><i class="undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/router/" class="nav-link"><i class="undefined"></i>
+  router
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/markDown/" class="nav-link"><i class="undefined"></i>
+  markDown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    9374
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>75</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>68</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/chrome/" class="nav-link"><i class="undefined"></i>
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eslint/" class="nav-link"><i class="undefined"></i>
+  eslint
+</a></li><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/game/" class="nav-link"><i class="undefined"></i>
+  game
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jQuery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mac/" class="nav-link"><i class="undefined"></i>
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/math/" class="nav-link"><i class="undefined"></i>
+  math
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mobile/" class="nav-link"><i class="undefined"></i>
+  mobile
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NAS/" class="nav-link"><i class="undefined"></i>
+  NAS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node.js/" class="nav-link"><i class="undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/router/" class="nav-link"><i class="undefined"></i>
+  router
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/markDown/" class="nav-link"><i class="undefined"></i>
+  markDown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>nginx</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>9374</span>
+          
+        <span data-v-59e6cb88>2018 - </span>
+        2023
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">nginx</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>9374</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/9/19</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>nginx</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="_1-官网下载tar包"><a href="#_1-官网下载tar包" class="header-anchor">#</a> 1.官网下载tar包</h2> <p><a href="https://nginx.org/en/download.html" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <a href="https://blog.csdn.net/m0_37959155/article/details/108913157" target="_blank" rel="noopener noreferrer">原文地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="_2-安装"><a href="#_2-安装" class="header-anchor">#</a> 2.安装</h2> <p>进入到 <code>/usr/local</code>目录
+这个目录是存放用户安装的一些东西
+<code>cd /usr/local</code></p> <h3 id="第一步-把-nginx-的源码包nginx-1-8-0-tar-gz上传到-linux-系统-笔者是通过安装lrzsz-然后输入rz后会弹出要上传的文件目录-用户选择-sz就是下载。其他方式也有请自行百度"><a href="#第一步-把-nginx-的源码包nginx-1-8-0-tar-gz上传到-linux-系统-笔者是通过安装lrzsz-然后输入rz后会弹出要上传的文件目录-用户选择-sz就是下载。其他方式也有请自行百度" class="header-anchor">#</a> 第一步：把 nginx 的源码包nginx-1.8.0.tar.gz上传到 linux 系统（笔者是通过安装lrzsz，然后输入rz后会弹出要上传的文件目录，用户选择）sz就是下载。其他方式也有请自行百度</h3> <h3 id="第二步-解压缩"><a href="#第二步-解压缩" class="header-anchor">#</a> 第二步：解压缩</h3> <p><code>tar zxvf nginx-1.8.0.tar.gz</code></p> <h3 id="第三步-进入nginx-1-8-0目录"><a href="#第三步-进入nginx-1-8-0目录" class="header-anchor">#</a> 第三步：进入nginx-1.8.0目录</h3> <p>可以看到有一个configure可执行文件,绿色代表可执行文件
+使用 configure 命令创建makeFile文件。</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>  <span class="token comment"># 后面的参数可以自定义 但是必须要不然make会报错 //make: *** 没有规则可以创建“default”需要的目标“build”。 停止。</span>
+  ./configure <span class="token punctuation">\</span>
+  <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/nginx <span class="token punctuation">\</span>
+  --pid-path<span class="token operator">=</span>/var/run/nginx/nginx.pid
+  --lock-path<span class="token operator">=</span>/var/lock/nginx.lock <span class="token punctuation">\</span>
+  --error-log-path<span class="token operator">=</span>/var/log/nginx/error.log <span class="token punctuation">\</span>
+  --http-log-path<span class="token operator">=</span>/var/log/nginx/access.log <span class="token punctuation">\</span>
+  --with-http_gzip_static_module <span class="token punctuation">\</span>
+  --http-client-body-temp-path<span class="token operator">=</span>/var/temp/nginx/client <span class="token punctuation">\</span>
+  --http-proxy-temp-path<span class="token operator">=</span>/var/temp/nginx/proxy <span class="token punctuation">\</span>
+  --http-fastcgi-temp-path<span class="token operator">=</span>/var/temp/nginx/fastcgi <span class="token punctuation">\</span>
+  --http-uwsgi-temp-path<span class="token operator">=</span>/var/temp/nginx/uwsgi <span class="token punctuation">\</span>
+  --http-scgi-temp-path<span class="token operator">=</span>/var/temp/nginx/scgi
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>执行后可以看到Makefile文件
+Makefile是一种配置文件， Makefile 一个工程中的源文件不计数，其按类型、功能、模块分别放在若干个目录中，makefile定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译，甚至于进行更复杂的功能操作，因为 makefile就像一个Shell脚本一样，其中也可以执行操作系统的命令。</p> <h4 id="configure参数"><a href="#configure参数" class="header-anchor">#</a> configure参数</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>./configure <span class="token punctuation">\</span>
+<span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr <span class="token punctuation">\</span>                                                        指向安装目录
+--sbin-path<span class="token operator">=</span>/usr/sbin/nginx <span class="token punctuation">\</span>                                 指向（执行）程序文件（nginx）
+--conf-path<span class="token operator">=</span>/etc/nginx/nginx.conf <span class="token punctuation">\</span>                      指向配置文件
+--error-log-path<span class="token operator">=</span>/var/log/nginx/error.log <span class="token punctuation">\</span>              指向log
+--http-log-path<span class="token operator">=</span>/var/log/nginx/access.log <span class="token punctuation">\</span>            指向http-log
+--pid-path<span class="token operator">=</span>/var/run/nginx/nginx.pid <span class="token punctuation">\</span>                      指向pid
+--lock-path<span class="token operator">=</span>/var/lock/nginx.lock <span class="token punctuation">\</span>                         （安装文件锁定，防止安装文件被别人利用，或自己误操作。）
+<span class="token parameter variable">--user</span><span class="token operator">=</span>nginx <span class="token punctuation">\</span>
+<span class="token parameter variable">--group</span><span class="token operator">=</span>nginx <span class="token punctuation">\</span>
+--with-http_ssl_module <span class="token punctuation">\</span>                      启用ngx_http_ssl_module支持（使支持https请求，需已安装openssl）
+--with-http_flv_module <span class="token punctuation">\</span>                       启用ngx_http_flv_module支持（提供寻求内存使用基于时间的偏移量文件）
+--with-http_stub_status_module <span class="token punctuation">\</span>     启用ngx_http_stub_status_module支持（获取nginx自上次启动以来的工作状态）
+--with-http_gzip_static_module <span class="token punctuation">\</span>   启用ngx_http_gzip_static_module支持（在线实时压缩输出数据流）
+--http-client-body-temp-path<span class="token operator">=</span>/var/tmp/nginx/client/ <span class="token punctuation">\</span> 设定http客户端请求临时文件路径
+--http-proxy-temp-path<span class="token operator">=</span>/var/tmp/nginx/proxy/ <span class="token punctuation">\</span> 设定http代理临时文件路径
+--http-fastcgi-temp-path<span class="token operator">=</span>/var/tmp/nginx/fcgi/ <span class="token punctuation">\</span> 设定http fastcgi临时文件路径
+--http-uwsgi-temp-path<span class="token operator">=</span>/var/tmp/nginx/uwsgi <span class="token punctuation">\</span> 设定http uwsgi临时文件路径
+--http-scgi-temp-path<span class="token operator">=</span>/var/tmp/nginx/scgi <span class="token punctuation">\</span> 设定http scgi临时文件路径
+--with-pcre 启用pcre库
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="第四步-编译"><a href="#第四步-编译" class="header-anchor">#</a> 第四步：编译</h3> <p><code>make</code></p> <h3 id="第五步-安装"><a href="#第五步-安装" class="header-anchor">#</a> 第五步：安装</h3> <p>make install</p> <p>注意：启动nginx 之前，因为上边configure命令将临时文件目录指定为/var/temp/nginx/client
+参考 --http-client-body-temp-path=/var/temp/nginx/client \</p> <p>所以需要在/var/temp/nginx/client 下创建此目录
+mkdir /var/temp/nginx/client -p
+返回查看 /usr/local目录，可以看到多了一个nginx目录
+进入到nginx目录可以看到有三个文件夹
+conf是配置文件所在目录，html是静态文件默认所在目录（可以修改静态文件位置，不放在这儿）,sbin是二进制命令所在目录
+进入到Nginx目录下的sbin目录
+cd sbin/
+可以看到只有一个nginx</p> <h2 id="_3-nginx-启动"><a href="#_3-nginx-启动" class="header-anchor">#</a> 3.nginx 启动</h2> <h3 id="输入命令启动nginx"><a href="#输入命令启动nginx" class="header-anchor">#</a> 输入命令启动Nginx</h3> <p><code>./nginx</code></p> <h3 id="nginx退出与重加载"><a href="#nginx退出与重加载" class="header-anchor">#</a> nginx退出与重加载</h3> <p><code>./nginx -s stop</code>非正常退出，相当于杀进程
+<code>./nginx -s quit</code>正常退出
+<code>./nginx -s reload</code>重新加载配置文件，就是加载上面的Makefile</p> <h2 id="_4-nginx静态网站部署"><a href="#_4-nginx静态网站部署" class="header-anchor">#</a> 4.nginx静态网站部署</h2> <ol><li>首先进入到/usr/local/nginx/conf目录下，可以看到有一个nginx.cnf文件
+点开/usr/local/nginx/conf目录双击nginx.conf打开在右侧可以看到具体文件内容。
+重点关注以下内容</li></ol> <ul><li>root是默认访问目录，这个html目录位于/usr/local/nginx目录下，index是默认访问的文件，也就是说直接输入ip访问到的内容，即nginx访问页。所以我们需要将自己项目中的index目录（一些静态资源例如html和css,font,js,image等）放到/usr/local/nginx目录下。使用xftp软件或者其他方式。</li></ul> <ol start="2"><li>连接后右侧进入到/usr/local/nginx目录，将左侧的index目录拖到右侧即可然后在editplus中将root对应的html目录名改为index。</li> <li>然后进入到/usr/lcoal/nginx/sbin目录，</li> <li>每次电脑开机后重新启动nginx后都会报错
+<code>nginx: [error] open() “/usr/local/var/run/nginx.pid” failed (2: No such file or directory)</code>
+报错的原因就是没有nginx文件夹或没有nginx.pid文件
+原因就是每次重新启动，系统都会自动删除文件，所以需要更改pid文件存储的位置**
+将pid前的#去掉，然后保存，然后在<code>/usr/local/nginx</code>目录下创建logs目录
+然后在sbin/ 路径下执行 <code>./nginx -c /usr/local/nginx/conf/nginx.conf</code>或者执行<code>./nginx -s reload</code>重新加载配置文件就会自动在logs下生成nginx.pid文件。
+最后在<code>/usr/local/nginx/sbin</code>目录执行<code>./nginx</code>命令启动nginx在浏览器输入ip访问即可。</li></ol> <h3 id="配置虚拟主机"><a href="#配置虚拟主机" class="header-anchor">#</a> 配置虚拟主机</h3> <p>虚拟主机，也叫“网站空间”，就是把一台运行在互联网上的物理服务器划分成多个“虚拟”服务器。虚拟主机技术极大的促进了网络技术的应用和普及。同时虚拟主机的租用服务也成了网络时代的一种新型经济形式。</p> <h4 id="端口绑定"><a href="#端口绑定" class="header-anchor">#</a> 端口绑定</h4> <p>例如有多个静态页面目录，不同的目录需要不同的端口，这就需要在<code>/usr/local/nginx/conf/nginx.conf</code>添加多个server。</p> <p>首先将多个静态页面所在目录上传至 <code>/usr/local/nginx</code>目录下并修改Nginx 的配置文件： <code>/usr/local/nginx/conf/nginx.conf</code>
+主要修改listen和root,index。如果是配置在不同的linux环境则需要修改server_name</p> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>server {
+        listen       80; # 监听的端口
+        server_name  localhost; # 域名或ip
+        location / {	# 访问路径配置
+            root   index;# 根目录
+            index  index.html index.htm; # 默认首页
+        }
+        error_page   500 502 503 504  /50x.html;	# 错误页面
+        location = /50x.html {
+            root   html;
+        }
+    }
+     server {
+        listen       81; # 监听的端口
+        server_name  localhost; # 域名或ip
+        location / {	# 访问路径配置
+            root   regist;# 根目录
+            index  regist.html; # 默认首页
+        }
+        error_page   500 502 503 504  /50x.html;	# 错误页面
+        location = /50x.html {
+            root   html;
+        }   
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><p>修改完成后，进入<code>/usr/local/nginx/sbin</code>目录执行<code>./nginx -s reload</code>重新加载配置文件后就可以访问测试。</p> <h4 id="域名绑定"><a href="#域名绑定" class="header-anchor">#</a> 域名绑定</h4> <p>域名与IP绑定：
+一个域名对应一个 ip 地址，一个 ip 地址可以被多个域名绑定。
+当我们在浏览器地址栏输入域名地址时如www.baidu.com，它首先会去C:\Windows\System32\drivers\etc这个目录找域名和ip的映射关系，如果找到了就访问对应的ip，找不到就会走dns服务器。
+在hosts文件可以配置域名和 ip 的映射关系，如果 hosts 文件中配置了域名和 ip 的对应关系，不需要走dns 服务器。本地测试可以修改 hosts 文件（C:\Windows\System32\drivers\etc），添加如下内容
+ip地址 域名
+即可做好域名指向后，修改完成后需要修改nginx配置文件</p> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>server {
+    listen       80;
+    server_name  域名(如www.baidu.com);
+    location / {
+        root   index;
+        index  index.html;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>然后进入/usr/local/nginx/sbin目录执行以下命令，刷新配置文件
+./nginx -s reload
+如果nginx关闭了，再执行
+./nginx
+启动nginx
+然后就可以在地址栏输入http://域名进行访问了</p> <h2 id="nginx反向代理与负载均衡"><a href="#nginx反向代理与负载均衡" class="header-anchor">#</a> Nginx反向代理与负载均衡</h2> <h3 id="反向代理"><a href="#反向代理" class="header-anchor">#</a> 反向代理</h3> <h4 id="什么是反向代理"><a href="#什么是反向代理" class="header-anchor">#</a> 什么是反向代理</h4> <p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。
+首先我们先理解正向代理，如下图：
+正向代理是针对你的客户端，而反向代理是针对服务器的，如下图</p> <h4 id="配置反向代理-准备工作"><a href="#配置反向代理-准备工作" class="header-anchor">#</a> 配置反向代理-准备工作</h4> <p>将项目部署到tomcat中，上传到服务器。</p> <h4 id="配置反向代理"><a href="#配置反向代理" class="header-anchor">#</a> 配置反向代理</h4> <p>在Nginx主机修改 Nginx配置文件</p> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>upstream tomcat-test{
+    server 192.168.3.12:8080;
+ }
+ server {
+     listen       80; # 监听的端口
+     server_name  www.test.com; # 域名或ip
+     location / {	# 访问路径配置
+         # root   index;# 根目录
+     proxy_pass http://tomcat-test.com;
+         index  index.html index.htm; # 默认首页
+     }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>重新启动Nginx 然后用浏览器测试：http://www.test.com （此域名须配置域名指向）,参考上面的域名绑定。</p> <h3 id="负载均衡"><a href="#负载均衡" class="header-anchor">#</a> 负载均衡</h3> <h4 id="什么是负载均衡"><a href="#什么是负载均衡" class="header-anchor">#</a> 什么是负载均衡</h4> <p>负载均衡 建立在现有网络结构之上，它提供了一种廉价有效透明的方法扩展网络设备和服务器的带宽、增加吞吐量、加强网络数据处理能力、提高网络的灵活性和可用性。
+负载均衡，英文名称为Load Balance，其意思就是分摊到多个操作单元上进行执行，例如Web服务器、FTP服务器、企业关键应用服务器和其它关键任务服务器等，从而共同完成工作任务。</p> <h4 id="配置负载均衡-准备工作"><a href="#配置负载均衡-准备工作" class="header-anchor">#</a> 配置负载均衡-准备工作</h4> <p>进入这个目录，执行以下命令
+<code>cp ./apache-tomcat-7.0.106 tomcat1</code> <code>cp ./apache-tomcat-7.0.106 tomcat2</code>
+将/ur/local/apache-tomcat-7.0.106复制两份，apache-tomcat-7.0.106中的server.xml不用修改，tomcat1和tomcat2的端口都要修改（在其server.xml中修改）tomcat1的serverl.xml中的所有涉及到的端口全部+1，tomcat2serverl.xml中的所有涉及到的端口全部+2。
+执行以下命令如
+<code>cd t/usr/local/tomcat/tomcat1/bin</code> <code>./startup.sh</code>
+另两个同理，记得把tomcat1换名。
+分别启动这三个tomcat服务。
+为了能够区分是访问哪个服务器的网站，可以在项目的起始访问首页标题加上标记以便区分。如</p><title>8080</title>
+4.2.3 配置负载均衡
+修改 Nginx配置文件：<p></p> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>  upstream tomcat-test {
+	   server 192.168.3.12:8080;
+	   server 192.168.3.12:8081;
+	   server 192.168.3.12:8082;
+    }
+    server {
+        listen       80; # 监听的端口
+        server_name  www.test.com; # 域名或ip
+        location / {	# 访问路径配置
+            # root   index;# 根目录
+	    proxy_pass http://tomcat-test.com;
+
+            index  index.html index.htm; # 默认首页
+        }
+        error_page   500 502 503 504  /50x.html;	# 错误页面
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>地址栏输入http:// www.test.com / 刷新观察每个网页的标题，看是否不同。
+经过测试，三台服务器出现的概率各为33.3333333%，交替显示。
+如果其中一台服务器性能比较好，想让其承担更多的压力，可以设置权重。
+比如想让NO.1出现次数是其它服务器的2倍，则修改配置如下：</p> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>    upstream tomcat-test {
+	   server 192.168.3.12:8080;
+	   server 192.168.3.12:8081 weight=2;
+	   server 192.168.3.12:8082;
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>经过测试，每刷新四次，有两次是8081</p> <h2 id="install"><a href="#install" class="header-anchor">#</a> install</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>如果没有gcc环境，需要安装gcc：
+yum <span class="token function">install</span> gcc-c++
+
+安装依赖
+yum <span class="token parameter variable">-y</span> <span class="token function">install</span> gcc zlib zlib-devel pcre-devel openssl openssl-devel
+
+<span class="token comment"># 进入文件夹</span>
+<span class="token builtin class-name">cd</span>  /usr/local
+
+<span class="token comment">#下载安装包</span>
+<span class="token function">wget</span> http://nginx.org/download/nginx-1.18.0.tar.gz
+
+<span class="token comment">#解压安装包</span>
+<span class="token function">tar</span> <span class="token parameter variable">-xvf</span> nginx-1.18.0.tar.gz 
+
+<span class="token comment">#解压之后不需要重新命名直接进去解压目录</span>
+<span class="token comment">#进入nginx-1.18.0目录 </span>
+<span class="token builtin class-name">cd</span> /usr/local/nginx-1.18.0
+
+<span class="token comment">#执行命令</span>
+<span class="token comment">#prefix= 指向安装目录（编译安装）</span>
+<span class="token comment">#conf-path= 指向配置文件（nginx.conf）</span>
+<span class="token comment">#error-log-path= 指向错误日志目录</span>
+<span class="token comment">#pid-path= 指向pid文件（nginx.pid）</span>
+<span class="token comment">#http-log-path= 设定access log路径</span>
+<span class="token comment">#with-http_gzip_static_module 启用ngx_http_gzip_static_module支持（在线实时压缩输出数据流）</span>
+<span class="token comment">#with-http_stub_status_module 启用ngx_http_stub_status_module支持（获取nginx自上次启动以来的工作状态）</span>
+<span class="token comment">#with-http_ssl_module 启用ngx_http_ssl_module支持（使支持https请求，需已安装openssl）</span>
+
+./configure <span class="token parameter variable">--prefix</span><span class="token operator">=</span>/usr/local/nginx --conf-path<span class="token operator">=</span>/usr/local/nginx/conf/nginx.conf  --error-log-path<span class="token operator">=</span>/usr/local/nginx/logs/error.log --pid-path<span class="token operator">=</span>/usr/local/nginx/logs/nginx.pid  --http-log-path<span class="token operator">=</span>/usr/local/nginx/logs/access.log --with-http_gzip_static_module --with-http_stub_status_module --with-http_ssl_module
+
+<span class="token comment">#执行命令</span>
+<span class="token function">make</span>
+
+<span class="token comment">#执行make install命令 </span>
+<span class="token function">make</span> <span class="token function">install</span>
+
+<span class="token comment">#启动nginx</span>
+ <span class="token builtin class-name">cd</span>  /usr/local/nginx/sbin
+./nginx
+
+<span class="token comment">#查看nginx进程</span>
+<span class="token function">ps</span> <span class="token parameter variable">-ef</span> <span class="token operator">|</span> <span class="token function">grep</span> nginx
+
+<span class="token comment">#打开阿里云的网路安全组开放80端口</span>
+
+<span class="token comment">#在浏览器访问服务器ip</span>
+
+<span class="token comment">#设置开机自动启动</span>
+<span class="token function">vim</span> /lib/systemd/system/nginx.service
+<span class="token comment">#按i编辑 把下面复制进去  按esc建  再按shift+：键 wq  保存退出</span>
+
+<span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
+<span class="token assign-left variable">Description</span><span class="token operator">=</span>The NGINX HTTP and reverse proxy server
+<span class="token assign-left variable">After</span><span class="token operator">=</span>syslog.target network-online.target remote-fs.target nss-lookup.target
+<span class="token assign-left variable">Wants</span><span class="token operator">=</span>network-online.target
+<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
+<span class="token assign-left variable">Type</span><span class="token operator">=</span>forking
+<span class="token comment">#自己nginx启动的pid文件自己找到文件目录</span>
+<span class="token assign-left variable">PIDFile</span><span class="token operator">=</span>/usr/local/nginx/logs/nginx.pid
+<span class="token comment">#自己nginx的启动文件 </span>
+<span class="token assign-left variable">ExecStartPre</span><span class="token operator">=</span>/usr/local/nginx/sbin/nginx <span class="token parameter variable">-t</span>
+<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/local/nginx/sbin/nginx
+<span class="token assign-left variable">ExecReload</span><span class="token operator">=</span>/usr/local/nginx/sbin/nginx <span class="token parameter variable">-s</span> reload
+<span class="token comment">#默认</span>
+<span class="token assign-left variable">ExecStop</span><span class="token operator">=</span>/bin/kill <span class="token parameter variable">-s</span> QUIT <span class="token variable">$MAINPID</span>
+<span class="token assign-left variable">PrivateTmp</span><span class="token operator">=</span>true
+<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
+<span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target
+
+
+<span class="token comment">#启动</span>
+systemctl start nginx.service
+
+设置开机自启
+systemctl <span class="token builtin class-name">enable</span> nginx.service
+
+<span class="token comment">#提示</span>
+Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+
+<span class="token comment">#停止开机自启动</span>
+systemctl disable nginx.service
+
+<span class="token comment">#查看服务当前状态</span>
+systemctl status nginx.service
+
+<span class="token comment">#重新启动服务</span>
+systemctl reload nginx.service
+
+<span class="token comment">#停止服务</span>
+systemctl stop nginx.service
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br></div></div><h2 id="nginx编译安装之-configure-参数详解"><a href="#nginx编译安装之-configure-参数详解" class="header-anchor">#</a> nginx编译安装之-./configure 参数详解</h2> <div class="language-conf line-numbers-mode"><pre class="language-text"><code>--with开头的，默认是禁用的(没启动的，想使用的话需要在编译的时候加上)
+
+ --without开头的，默认是启用的(不想启用此模块时，可以在编译的时候加上这个参数)
+
+ 编译安装示例(从生产上贴下来的，nginx-1.16)
+
+./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp--http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp--http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp--user=nginx --group=nginx --with-file-aio
+
+ --prefix=  指向安装目录。
+
+ --sbin-path=  指定执行程序文件存放位置。
+
+ --modules-path=  指定第三方模块的存放路径。
+
+ --conf-path= 指定配置文件存放位置。
+
+ --error-log-path=  指定错误日志存放位置。
+
+ --pid-path=  指定pid文件存放位置。
+
+ --lock-path=  指定lock文件存放位置。
+
+ --user=  指定程序运行时的非特权用户。
+
+ --group=  指定程序运行时的非特权用户组。
+
+ --builddir=  指向编译目录。
+
+ --with-rtsig_module  启用rtsig模块支持。
+
+ --with-select_module  启用select模块支持，一种轮询处理方式，不推荐在高并发环境中使用，禁用：--without-select_module。
+
+ --with-poll_module  启用poll模块支持,功能与select相同，不推荐在高并发环境中使用。
+
+ --with-threads 启用thread pool支持。
+
+ --with-file-aio  启用file aio支持。
+
+ --with-http_ssl_module 启用https支持。
+
+ --with-http_v2_module    启用ngx_http_v2_module支持。
+
+ --with-ipv6    启用ipv6支持。
+
+ --with-http_realip_module    允许从请求报文头中更改客户端的ip地址，默认为关。
+
+ --with-http_addition_module    启用ngix_http_additon_mdoule支持（作为一个输出过滤器，分部分响应请求)。
+
+ --with -http_xslt_module    启用ngx_http_xslt_module支持，过滤转换XML请求 。
+
+ --with-http_image_filter_mdoule  启用ngx_http_image_filter_module支持，传输JPEG\GIF\PNG图片的一个过滤器，默认不启用，需要安装gd库。
+
+ --with-http_geoip_module  启用ngx_http_geoip_module支持，用于创建基于MaxMind GeoIP二进制文件相配的客户端IP地址的ngx_http_geoip_module变量。
+
+ --with-http_sub_module  启用ngx_http_sub_module支持，允许用一些其他文本替换nginx响应中的一些文本。
+
+ --with-http_dav_module  启用ngx_http_dav_module支持，增加PUT、DELETE、MKCOL创建集合，COPY和MOVE方法，默认为关闭，需要编译开启。
+
+ --with-http_flv_module  启用ngx_http_flv_module支持，提供寻求内存使用基于时间的偏移量文件。
+
+ --with-http_mp4_module  启用ngx_http_mp4_module支持，启用对mp4类视频文件的支持。
+
+ --with-http_gzip_static_module  启用ngx_http_gzip_static_module支持，支持在线实时压缩输出数据流。
+
+ --with-http_random_index_module  启用ngx_http_random_index_module支持，从目录中随机挑选一个目录索引。
+
+ --with-http_secure_link_module  启用ngx_http_secure_link_module支持，计算和检查要求所需的安全链接网址。
+
+ --with-http_degradation_module  启用ngx_http_degradation_module 支持允许在内存不足的情况下返回204或444代码。
+
+ --with-http_stub_status_module  启用ngx_http_stub_status_module 支持查看nginx的状态页。
+
+ --without-http_charset_module  禁用ngx_http_charset_module这一模块，可以进行字符集间的转换，从其它字符转换成UTF-8或者从UTF8转换成其它字符。它只能从服务器到客户端方向，只有一个字节的字符可以转换。
+
+ --without-http_gzip_module  禁用ngx_http_gzip_module支持，同--with-http_gzip_static_module功能一样。
+
+ --without-http_ssi_module  禁用ngx_http_ssi_module支持，提供了一个在输入端处理服务器包含文件（SSI）的过滤器。
+
+ --without-http_userid_module  禁用ngx_http_userid_module支持，该模块用来确定客户端后续请求的cookies。
+
+ --without-http_access_module  禁用ngx_http_access_module支持，提供了基于主机ip地址的访问控制功能。
+
+ --without-http_auth_basic_module  禁用ngx_http_auth_basic_module支持，可以使用用户名和密码认证的方式来对站点或部分内容进行认证。
+
+ --without-http_autoindex_module  禁用ngx_http_authindex_module，该模块用于在ngx_http_index_module模块没有找到索引文件时发出请求，用于自动生成目录列表。
+
+ --without-http_geo_module  禁用ngx_http_geo_module支持，这个模块用于创建依赖于客户端ip的变量。
+
+ --without-http_map_module  禁用ngx_http_map_module支持，使用任意的键、值 对设置配置变量。
+
+ --without-http_split_clients_module 禁用ngx_http_split_clients_module支持，该模块用于基于用户ip地址、报头、cookies划分用户。
+
+ --without-http_referer_module  禁用ngx_http_referer_modlue支持，该模块用来过滤请求，报头中Referer值不正确的请求。
+
+ --without-http_rewrite_module  禁用ngx_http_rewrite_module支持。该模块允许使用正则表达式改变URI，并且根据变量来转向以及选择配置。如果在server级别设置该选项，那么将在location之前生效，但如果location中还有更进一步的重写规则，location部分的规则依然会被执行。如果这个URI重写是因为location部分的规则造成的，那么location部分会再次被执行作为新的URI，这个循环会被执行10次，最后返回一个500错误。
+
+ --without-http_proxy_module  禁用ngx_http_proxy_module支持，http代理功能。
+
+ --without-http_fastcgi_module  禁用ngx_http_fastcgi_module支持，该模块允许nginx与fastcgi进程交互，并通过传递参数来控制fastcgi进程工作。
+
+ --without-http_uwsgi_module  禁用ngx_http_uwsgi_module支持，该模块用来使用uwsgi协议，uwsgi服务器相关。
+
+ --without-http_scgi_module  禁用ngx_http_scgi_module支持，类似于fastcgi，也是应用程序与http服务的接口标准。
+
+ --without-http_memcached_module  禁用ngx_http_memcached支持，用来提供简单的缓存，提高系统效率。
+
+ --without-http_limit_conn_module  禁用ngx_http_limit_conn_module支持，该模块可以根据条件进行会话的并发连接数进行限制。
+
+ --without-http_limit_req_module  禁用ngx_limit_req_module支持，该模块可以实现对于一个地址进行请求数量的限制。
+
+ --without-http_empty_gif_module  禁用ngx_http_empty_gif_module支持，该模块在内存中常驻了一个1*1的透明gif图像，可以被非常快速的调用。
+
+ --without-http_browser_module  禁用ngx_http_browser_mdoule支持，创建依赖于请求报头的值 。如果浏览器为modern，则$modern_browser等于modern_browser_value的值；如果浏览器为old，则$ancient_browser等于$ancient_browser_value指令分配的值；如果浏览器为MSIE，则$msie等于1。
+
+ --without-http_upstream_ip_hash_module 禁用ngx_http_upstream_ip_hash_module支持，该模块用于简单的负载均衡。
+
+ --with-http_perl_module  启用ngx_http_perl_module支持，它使nginx可以直接使用perl或通过ssi调用perl。
+
+ --with-perl_modules_path=  设定perl模块路径
+
+ --with-perl=  设定perl库文件路径
+
+ --http-log-path=  设定access log路径
+
+ --http-client-body-temp-path=  设定http客户端请求临时文件路径
+
+ --http-proxy-temp-path=  设定http代理临时文件路径
+
+ --http-fastcgi-temp-path=  设定http fastcgi临时文件路径
+
+ --http-uwsgi-temp-path=  设定http scgi临时文件路径
+
+ --http-scgi-temp-path=  设定http scgi临时文件路径
+
+ --without-http  禁用http server功能
+
+ --without-http-cache  禁用http cache功能
+
+ --with-mail  启用POP3、IMAP4、SMTP代理模块
+
+ --with-mail_ssl_module  启用ngx_mail_ssl_module支持
+
+ --without-mail_pop3_module  禁用pop3协议。
+
+ --without-mail_iamp_module  禁用iamp协议。
+
+ --without-mail_smtp_module  禁用smtp协议。
+
+ --with-google_perftools_module  启用ngx_google_perftools_mdoule支持，调试用，可以用来分析程序性能瓶颈。
+
+ --with-cpp_test_module 启用ngx_cpp_test_module支持。
+
+ --add-module=  指定外部模块路径，启用对外部模块的支持。
+
+ --with-cc=  指向C编译器路径。
+
+ --with-cpp=  指向C预处理路径。
+
+ --with-cc-opt=  设置C编译器参数，指定--with-cc-opt=&quot;-I /usr/lcal/include&quot;,如果使用select()函数，还需要同时指定文件描述符数量--with-cc-opt=&quot;-D FD_SETSIZE=2048&quot;。 (PCRE库）
+
+ --with-ld-opt=  设置连接文件参数，需要指定--with-ld-opt=&quot;-L /usr/local/lib&quot;。（PCRE库）
+
+ --with-cpu-opt=  指定编译的CPU类型，如pentium,pentiumpro,...amd64,ppc64...
+
+ --without-pcre  禁用pcre库。
+
+ --with-pcre  启用pcre库。
+
+ --with-pcre=  指向pcre库文件目录。
+
+ --with-pcre-opt=  在编译时为pcre库设置附加参数 。
+
+ --with-md5=  指向md5库文件目录。
+
+ --with-md5-opt=  编译时为md5库设置附加参数。
+
+ --with-md5-asm  使用md5汇编源。
+
+ --with-sha1=  指向sha1库文件目录。
+
+ --with-sha1-opt=  编译时为sha1库设置附加参数。
+
+ --with-sha1-asm  使用sha1汇编源。
+
+ --with-zlib=  指向zlib库文件目录。
+
+ --with-zlib-opt=  在编译时为zlib设置附加参数。
+
+ --with-zlib-asm=  为指定的CPU使用汇编源进行优化。
+
+ --with-libatomic  为原子内存的更新操作的实现提供一个架构。
+
+ --with-libatomic=  指向libatomic_ops的安装目录。
+
+ --with-openssl=  指向openssl安装目录。
+
+ --with-openssl-opt=  在编译时为openssl设置附加参数。
+
+ --with-debug  启用debug日志。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#_1-官网下载tar包" class="sidebar-link reco-side-_1-官网下载tar包" data-v-ac050c62>1.官网下载tar包</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#_2-安装" class="sidebar-link reco-side-_2-安装" data-v-ac050c62>2.安装</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#第一步-把-nginx-的源码包nginx-1-8-0-tar-gz上传到-linux-系统-笔者是通过安装lrzsz-然后输入rz后会弹出要上传的文件目录-用户选择-sz就是下载。其他方式也有请自行百度" class="sidebar-link reco-side-第一步-把-nginx-的源码包nginx-1-8-0-tar-gz上传到-linux-系统-笔者是通过安装lrzsz-然后输入rz后会弹出要上传的文件目录-用户选择-sz就是下载。其他方式也有请自行百度" data-v-ac050c62>第一步：把 nginx 的源码包nginx-1.8.0.tar.gz上传到 linux 系统（笔者是通过安装lrzsz，然后输入rz后会弹出要上传的文件目录，用户选择）sz就是下载。其他方式也有请自行百度</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#第二步-解压缩" class="sidebar-link reco-side-第二步-解压缩" data-v-ac050c62>第二步：解压缩</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#第三步-进入nginx-1-8-0目录" class="sidebar-link reco-side-第三步-进入nginx-1-8-0目录" data-v-ac050c62>第三步：进入nginx-1.8.0目录</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#第四步-编译" class="sidebar-link reco-side-第四步-编译" data-v-ac050c62>第四步：编译</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#第五步-安装" class="sidebar-link reco-side-第五步-安装" data-v-ac050c62>第五步：安装</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#_3-nginx-启动" class="sidebar-link reco-side-_3-nginx-启动" data-v-ac050c62>3.nginx 启动</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#输入命令启动nginx" class="sidebar-link reco-side-输入命令启动nginx" data-v-ac050c62>输入命令启动Nginx</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#nginx退出与重加载" class="sidebar-link reco-side-nginx退出与重加载" data-v-ac050c62>nginx退出与重加载</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#_4-nginx静态网站部署" class="sidebar-link reco-side-_4-nginx静态网站部署" data-v-ac050c62>4.nginx静态网站部署</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#配置虚拟主机" class="sidebar-link reco-side-配置虚拟主机" data-v-ac050c62>配置虚拟主机</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#nginx反向代理与负载均衡" class="sidebar-link reco-side-nginx反向代理与负载均衡" data-v-ac050c62>Nginx反向代理与负载均衡</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#反向代理" class="sidebar-link reco-side-反向代理" data-v-ac050c62>反向代理</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/linux/nginx.html#负载均衡" class="sidebar-link reco-side-负载均衡" data-v-ac050c62>负载均衡</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#install" class="sidebar-link reco-side-install" data-v-ac050c62>install</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/linux/nginx.html#nginx编译安装之-configure-参数详解" class="sidebar-link reco-side-nginx编译安装之-configure-参数详解" data-v-ac050c62>nginx编译安装之-./configure 参数详解</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.79fcf93e.js" defer></script><script src="/assets/js/3.9446284f.js" defer></script><script src="/assets/js/1.83d3f97c.js" defer></script><script src="/assets/js/42.b9486543.js" defer></script>
+  </body>
+</html>

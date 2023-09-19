@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>wd的启动过程及注意要点 | zvue</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.0ab6a768.css" as="style"><link rel="preload" href="/assets/js/app.79fcf93e.js" as="script"><link rel="preload" href="/assets/js/3.9446284f.js" as="script"><link rel="preload" href="/assets/js/1.83d3f97c.js" as="script"><link rel="preload" href="/assets/js/20.f999ee22.js" as="script"><link rel="prefetch" href="/assets/js/10.701200e3.js"><link rel="prefetch" href="/assets/js/11.275f16fd.js"><link rel="prefetch" href="/assets/js/12.f8ab336d.js"><link rel="prefetch" href="/assets/js/13.5841f8be.js"><link rel="prefetch" href="/assets/js/14.18de3850.js"><link rel="prefetch" href="/assets/js/15.e3193774.js"><link rel="prefetch" href="/assets/js/16.c89f0b8f.js"><link rel="prefetch" href="/assets/js/17.dc3bb0c0.js"><link rel="prefetch" href="/assets/js/18.e3a0b77d.js"><link rel="prefetch" href="/assets/js/19.c615258e.js"><link rel="prefetch" href="/assets/js/21.46852247.js"><link rel="prefetch" href="/assets/js/22.a1e96022.js"><link rel="prefetch" href="/assets/js/23.94788724.js"><link rel="prefetch" href="/assets/js/24.fb37a205.js"><link rel="prefetch" href="/assets/js/25.bac60109.js"><link rel="prefetch" href="/assets/js/26.851d8f0c.js"><link rel="prefetch" href="/assets/js/27.f407c03d.js"><link rel="prefetch" href="/assets/js/28.4dee56f4.js"><link rel="prefetch" href="/assets/js/29.1568f46d.js"><link rel="prefetch" href="/assets/js/30.178a4140.js"><link rel="prefetch" href="/assets/js/31.d6eac92e.js"><link rel="prefetch" href="/assets/js/32.682a6909.js"><link rel="prefetch" href="/assets/js/33.a2229843.js"><link rel="prefetch" href="/assets/js/34.e6e106d7.js"><link rel="prefetch" href="/assets/js/35.23bdd722.js"><link rel="prefetch" href="/assets/js/36.516ce882.js"><link rel="prefetch" href="/assets/js/37.8ab9d0a9.js"><link rel="prefetch" href="/assets/js/38.1ab2b4aa.js"><link rel="prefetch" href="/assets/js/39.b628cb26.js"><link rel="prefetch" href="/assets/js/4.a126a949.js"><link rel="prefetch" href="/assets/js/40.721053f2.js"><link rel="prefetch" href="/assets/js/41.c93c29bb.js"><link rel="prefetch" href="/assets/js/42.b9486543.js"><link rel="prefetch" href="/assets/js/43.6535ff61.js"><link rel="prefetch" href="/assets/js/44.42cc53ce.js"><link rel="prefetch" href="/assets/js/45.ab9f0218.js"><link rel="prefetch" href="/assets/js/46.ca191973.js"><link rel="prefetch" href="/assets/js/47.953a858f.js"><link rel="prefetch" href="/assets/js/48.48101037.js"><link rel="prefetch" href="/assets/js/49.ebe44af2.js"><link rel="prefetch" href="/assets/js/5.2f9f316b.js"><link rel="prefetch" href="/assets/js/50.fe92fcb8.js"><link rel="prefetch" href="/assets/js/51.74907353.js"><link rel="prefetch" href="/assets/js/52.0d58ec3b.js"><link rel="prefetch" href="/assets/js/53.a3f87dbc.js"><link rel="prefetch" href="/assets/js/54.89e1d576.js"><link rel="prefetch" href="/assets/js/55.36bc7987.js"><link rel="prefetch" href="/assets/js/56.663cefbe.js"><link rel="prefetch" href="/assets/js/57.4dbb089e.js"><link rel="prefetch" href="/assets/js/58.4c7954a7.js"><link rel="prefetch" href="/assets/js/59.e337873c.js"><link rel="prefetch" href="/assets/js/6.79caa79a.js"><link rel="prefetch" href="/assets/js/60.62dc1d0a.js"><link rel="prefetch" href="/assets/js/61.fa5d4567.js"><link rel="prefetch" href="/assets/js/62.98ff8ff7.js"><link rel="prefetch" href="/assets/js/63.cc2e73f6.js"><link rel="prefetch" href="/assets/js/64.27fb9823.js"><link rel="prefetch" href="/assets/js/65.153fdc29.js"><link rel="prefetch" href="/assets/js/66.0fbca66c.js"><link rel="prefetch" href="/assets/js/67.510619db.js"><link rel="prefetch" href="/assets/js/68.f1cd1e56.js"><link rel="prefetch" href="/assets/js/69.07313582.js"><link rel="prefetch" href="/assets/js/7.b82c441b.js"><link rel="prefetch" href="/assets/js/70.08bdfc27.js"><link rel="prefetch" href="/assets/js/71.1cf4b650.js"><link rel="prefetch" href="/assets/js/72.6f64729d.js"><link rel="prefetch" href="/assets/js/73.bd823c17.js"><link rel="prefetch" href="/assets/js/74.c9473203.js"><link rel="prefetch" href="/assets/js/75.78373fae.js"><link rel="prefetch" href="/assets/js/76.cf16bb24.js"><link rel="prefetch" href="/assets/js/77.1a22e988.js"><link rel="prefetch" href="/assets/js/78.8754430d.js"><link rel="prefetch" href="/assets/js/79.a39a8ca0.js"><link rel="prefetch" href="/assets/js/8.9cc0f7d8.js"><link rel="prefetch" href="/assets/js/80.99dc5cdc.js"><link rel="prefetch" href="/assets/js/81.63641222.js"><link rel="prefetch" href="/assets/js/82.c964c56c.js"><link rel="prefetch" href="/assets/js/83.30118c3d.js"><link rel="prefetch" href="/assets/js/84.5720dccd.js"><link rel="prefetch" href="/assets/js/85.4f7a7c75.js"><link rel="prefetch" href="/assets/js/86.3a01ad50.js"><link rel="prefetch" href="/assets/js/87.099a6d75.js"><link rel="prefetch" href="/assets/js/9.0d65730a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.0ab6a768.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-5bb33761><div data-v-5bb33761><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-5bb33761 data-v-5bb33761><h3 class="title" data-v-59e6cb88>zvue</h3> <p class="description" data-v-59e6cb88></p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>9374</span>
+          
+        <span data-v-59e6cb88>2018 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-5bb33761><header class="navbar" data-v-5bb33761><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">zvue</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/chrome/" class="nav-link"><i class="undefined"></i>
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eslint/" class="nav-link"><i class="undefined"></i>
+  eslint
+</a></li><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/game/" class="nav-link"><i class="undefined"></i>
+  game
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jQuery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mac/" class="nav-link"><i class="undefined"></i>
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/math/" class="nav-link"><i class="undefined"></i>
+  math
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mobile/" class="nav-link"><i class="undefined"></i>
+  mobile
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NAS/" class="nav-link"><i class="undefined"></i>
+  NAS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node.js/" class="nav-link"><i class="undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/router/" class="nav-link"><i class="undefined"></i>
+  router
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/markDown/" class="nav-link"><i class="undefined"></i>
+  markDown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5bb33761></div> <aside class="sidebar" data-v-5bb33761><div class="personal-info-wrapper" data-v-1fad0c41 data-v-5bb33761><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    9374
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>75</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>68</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/chrome/" class="nav-link"><i class="undefined"></i>
+  chrome
+</a></li><li class="dropdown-item"><!----> <a href="/categories/eslint/" class="nav-link"><i class="undefined"></i>
+  eslint
+</a></li><li class="dropdown-item"><!----> <a href="/categories/css/" class="nav-link"><i class="undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/categories/Git/" class="nav-link"><i class="undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/categories/game/" class="nav-link"><i class="undefined"></i>
+  game
+</a></li><li class="dropdown-item"><!----> <a href="/categories/js/" class="nav-link"><i class="undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/jQuery/" class="nav-link"><i class="undefined"></i>
+  jQuery
+</a></li><li class="dropdown-item"><!----> <a href="/categories/linux/" class="nav-link"><i class="undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mac/" class="nav-link"><i class="undefined"></i>
+  mac
+</a></li><li class="dropdown-item"><!----> <a href="/categories/math/" class="nav-link"><i class="undefined"></i>
+  math
+</a></li><li class="dropdown-item"><!----> <a href="/categories/mobile/" class="nav-link"><i class="undefined"></i>
+  mobile
+</a></li><li class="dropdown-item"><!----> <a href="/categories/NAS/" class="nav-link"><i class="undefined"></i>
+  NAS
+</a></li><li class="dropdown-item"><!----> <a href="/categories/node.js/" class="nav-link"><i class="undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/categories/router/" class="nav-link"><i class="undefined"></i>
+  router
+</a></li><li class="dropdown-item"><!----> <a href="/categories/python/" class="nav-link"><i class="undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/categories/markDown/" class="nav-link"><i class="undefined"></i>
+  markDown
+</a></li><li class="dropdown-item"><!----> <a href="/categories/vue/" class="nav-link"><i class="undefined"></i>
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-5bb33761><h3 class="title" data-v-59e6cb88>wd的启动过程及注意要点</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>9374</span>
+          
+        <span data-v-59e6cb88>2018 - </span>
+        2023
+      </a></span></div></div> <div data-v-5bb33761><div data-v-5bb33761><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">wd的启动过程及注意要点</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>9374</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/2/6</span></i> <!----> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>wd</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="启动过程"><a href="#启动过程" class="header-anchor">#</a> 启动过程</h2> <ol><li>上传服务端文件
+<ol><li>更改服务端文件777权限;</li> <li>更改.ini配置文件,填入数据库配置信息;</li></ol></li> <li>连接数据库
+<ol><li>安装mysql 5.6</li> <li>配置navcat,取消使用mysql字符集</li> <li>创建数据库,</li> <li>运行sql文件,字符集选择gb2312</li> <li>修改服务器对应ip;</li></ol></li> <li>启动
+<ol><li>开放端口</li> <li>ssh连接服务器</li> <li>执行对应目录下的 ./run*</li></ol></li></ol> <h2 id="修改"><a href="#修改" class="header-anchor">#</a> 修改</h2> <h3 id="开放端口"><a href="#开放端口" class="header-anchor">#</a> 开放端口</h3> <table><thead><tr><th>端口</th> <th>备注</th> <th>协议</th></tr></thead> <tbody><tr><td>8101</td> <td>aaa</td> <td>TCP</td></tr> <tr><td>8120</td> <td>dba</td> <td>TCP</td></tr> <tr><td>6101</td> <td>csa</td> <td>TCP</td></tr> <tr><td>8022</td> <td>dba_pk</td> <td>TCP</td></tr> <tr><td>8110</td> <td>cs_ccs</td> <td>TCP</td></tr> <tr><td>8012</td> <td>cs_ccs</td> <td>TCP</td></tr> <tr><td>8160</td> <td>gs</td> <td>TCP</td></tr> <tr><td>9257</td> <td>gs</td> <td>TCP</td></tr></tbody></table> <h3 id="ip修改"><a href="#ip修改" class="header-anchor">#</a> ip修改</h3> <table><thead><tr><th>表名</th> <th>字段</th> <th>值</th></tr></thead> <tbody><tr><td>aaa</td> <td>aaa</td> <td>aaa_daili</td></tr> <tr><td>ccs</td> <td>ccs</td> <td>ccs_daili</td></tr> <tr><td>cs_ccs</td> <td>ccs</td> <td>ccs_daili</td></tr> <tr><td>cs_ccs</td> <td>ccs</td> <td>ccs_pk</td></tr> <tr><td>csa</td> <td>csa</td> <td>csa_daili</td></tr> <tr><td>cta</td> <td>cta</td> <td>普天同庆</td></tr> <tr><td>dba</td> <td>dba</td> <td>dba_daili</td></tr> <tr><td>dba</td> <td>dba</td> <td>dba_jiangw_pk</td></tr> <tr><td>server</td> <td></td> <td></td></tr> <tr><td>spa</td> <td>spa</td> <td>spa_jiangw</td></tr> <tr><td>spa</td> <td>spa</td> <td>spa_jiangw_pk</td></tr> <tr><td>tts</td> <td>tts</td> <td>tts_jiangw</td></tr></tbody></table> <h3 id="数据库"><a href="#数据库" class="header-anchor">#</a> 数据库</h3> <table><thead><tr><th>数据库</th> <th>要求</th></tr></thead> <tbody><tr><td>版本</td> <td>mysql_5.6</td></tr> <tr><td>字符集</td> <td>GB2312</td></tr> <tr><td>使用mysql字符集</td> <td>false</td></tr></tbody></table></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间: </span> <span class="time">2023/2/11 18:15:13</span></div></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-ac050c62><li class="level-2" data-v-ac050c62><a href="/blogs/game/wd.html#启动过程" class="sidebar-link reco-side-启动过程" data-v-ac050c62>启动过程</a></li><li class="level-2" data-v-ac050c62><a href="/blogs/game/wd.html#修改" class="sidebar-link reco-side-修改" data-v-ac050c62>修改</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/game/wd.html#开放端口" class="sidebar-link reco-side-开放端口" data-v-ac050c62>开放端口</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/game/wd.html#ip修改" class="sidebar-link reco-side-ip修改" data-v-ac050c62>ip修改</a></li><li class="level-3" data-v-ac050c62><a href="/blogs/game/wd.html#数据库" class="sidebar-link reco-side-数据库" data-v-ac050c62>数据库</a></li></ul></main></div> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.79fcf93e.js" defer></script><script src="/assets/js/3.9446284f.js" defer></script><script src="/assets/js/1.83d3f97c.js" defer></script><script src="/assets/js/20.f999ee22.js" defer></script>
+  </body>
+</html>
